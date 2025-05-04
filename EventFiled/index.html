@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event    Filed</title>
+    <style>
+       body{
+        padding-top: 12%;
+        padding-left: 35%;
+       }
+    </style>
+</head>
+<body>
+    <h1>Event   Filed</h1>
+    <form onsubmit=" return   form()" id="MYFORM">
+        <label for="password">
+        Passward:
+<input type="password"  id="password"   name="password" onfocus="this.style.backgroundColor='red';" onblur="this.style.backgroundColor='white';"></br></br>
+</label>
+<a><input type="submit"  id="btn"  value="Submit" ></a>
+    </form>
+    <P  id="paragraph"  style="color: red;"></P>
+    <P  id="p2"  style="font-size: 20px;"></P>
+    <script>
+        
+
+
+        function   form(){
+            
+            let password=document.getElementById("password")
+            let  paragraph=document.getElementById("paragraph")    
+            let  myform=document.querySelector("#MYFORM")
+    let     para2=document.getElementById("p2")       
+            if(password.value===""){
+    // console.log("fuul   karo    bahi    jan")
+    paragraph.textContent="Please  Enter    a   valid   Passward "
+return  false;}
+if(password.value.length    < 8){
+
+    paragraph.textContent="passward must    bi  atleast 8   character   "
+
+return  false;
+
+}
+
+    alert("Form has been submited   ")
+    paragraph.textContent=""
+    
+    para2.textContent=`Your Password: ${password.value}`;
+
+    myform.reset();
+    return  false;
+
+
+
+
+
+}
+
+
+
+
+</script>
+</body>
+</html>
